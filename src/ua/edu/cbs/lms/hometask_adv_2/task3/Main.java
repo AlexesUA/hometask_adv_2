@@ -18,6 +18,9 @@ public class Main {
             ErrorsHandling.errorsHandling(error);
         }
 
+        System.out.println("Your numbers array: ");
+        numArray.printArray();
+
         System.out.println("\n\nMinimal number is: " + numArray.getMinimalNumber());
     }
 }
