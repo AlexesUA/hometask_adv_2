@@ -1,15 +1,11 @@
 package ua.edu.cbs.lms.hometask_adv_2.task3;
 
-
 import ua.edu.cbs.lms.hometask_adv_2.errorshandling.ErrorsHandling;
 
-import java.util.Iterator;
-import java.util.Random;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
-public class NumbersArray {
-    private Set<Integer> numbersList = new TreeSet<>();
+public class NumbersArrayLinkedList {
+    private List<Integer> numbersList = new LinkedList<>();
 
     public boolean getIntegerList(int count){
         try{
@@ -30,7 +26,14 @@ public class NumbersArray {
     public Integer getMinimalNumber(){
         try {
             if(!numbersList.iterator().hasNext()) throw new Exception("Arrays is null.");
-            return numbersList.iterator().next();
+
+//            Integer minNumber = numbersList.get(0);
+//            for(int i=1; i<numbersList.size()-1; i++){
+//                if(minNumber > numbersList.get(i)) minNumber = numbersList.get(i);
+//            }
+//            return minNumber;
+
+            return numbersList.stream().min((o1, o2) -> o1 - o2).get();
         }catch (Exception error){
             ErrorsHandling.errorsHandling(error);
             return null;
@@ -38,7 +41,7 @@ public class NumbersArray {
     }
 
     public void printArray(){
-        Iterator<Integer> iteratorNumbers = numbersList.iterator();
+        ListIterator<Integer> iteratorNumbers = numbersList.listIterator();
         int newLineMarker = 30;
 
         while (iteratorNumbers.hasNext()){
@@ -52,7 +55,4 @@ public class NumbersArray {
 
     }
 
-    public int getCount(){
-        return numbersList.size();
-    }
 }
