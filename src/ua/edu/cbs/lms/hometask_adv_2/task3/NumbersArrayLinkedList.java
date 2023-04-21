@@ -27,8 +27,11 @@ public class NumbersArrayLinkedList {
         try {
             if(!numbersList.iterator().hasNext()) throw new Exception("Arrays is null.");
 
-            //Integer minNumber = numbersList.stream().min((o1, o2) -> o1 - o2).get();
-
+//            Integer minNumber = numbersList.get(0);
+//            for(int i=1; i<numbersList.size()-1; i++){
+//                if(minNumber > numbersList.get(i)) minNumber = numbersList.get(i);
+//            }
+//            return minNumber;
 
             return numbersList.stream().min((o1, o2) -> o1 - o2).get();
         }catch (Exception error){

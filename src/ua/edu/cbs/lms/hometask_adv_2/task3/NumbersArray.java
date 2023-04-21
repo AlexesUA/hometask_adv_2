@@ -51,4 +51,8 @@ public class NumbersArray {
         }
 
     }
+
+    public int getCount(){
+        return numbersList.size();
+    }
 }
