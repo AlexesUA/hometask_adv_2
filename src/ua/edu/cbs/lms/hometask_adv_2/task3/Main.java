@@ -9,11 +9,15 @@ public class Main {
         Scanner scInput = new Scanner(System.in);
         NumbersArray numArray = new NumbersArray();
 
-        System.out.print("Enter count of random numbers: ");
         try{
-            numArray.getIntegerList(scInput.nextInt());
+            do {
+                System.out.print("Enter count of random numbers: ");
+
+            }while (!numArray.getIntegerList(scInput.nextInt()));
         }catch (Exception error){
             ErrorsHandling.errorsHandling(error);
         }
+
+        System.out.println("\n\nMinimal number is: " + numArray.getMinimalNumber());
     }
 }
