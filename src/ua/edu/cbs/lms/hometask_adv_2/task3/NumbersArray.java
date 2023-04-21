@@ -25,6 +25,11 @@ public class NumbersArray {
     }
 
     public Integer getMinimalNumber(){
-        return numbersList.iterator().next();
+        try {
+            return numbersList.iterator().next();
+        }catch (Exception error){
+            ErrorsHandling.errorsHandling(error);
+            return null;
+        }
     }
 }
