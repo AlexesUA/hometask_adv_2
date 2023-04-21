@@ -16,11 +16,6 @@ public class Main {
             if(words.addWord(scInput.nextLine())) indexWord++;
         }
 
-//        words.addWord("One");
-//        words.addWord("Two");
-//        words.addWord("Three");
-//        words.addWord("Four");
-//        words.addWord("Five");
 
         System.out.println("\nBefore double:");
         words.print();
