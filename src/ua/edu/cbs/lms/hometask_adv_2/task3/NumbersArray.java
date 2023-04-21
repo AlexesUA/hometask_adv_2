@@ -3,12 +3,13 @@ package ua.edu.cbs.lms.hometask_adv_2.task3;
 
 import ua.edu.cbs.lms.hometask_adv_2.errorshandling.ErrorsHandling;
 
+import java.util.Iterator;
 import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class NumbersArray {
-    Set<Integer> numbersList = new TreeSet<>();
+    private Set<Integer> numbersList = new TreeSet<>();
 
     public boolean getIntegerList(int count){
         try{
@@ -31,5 +32,19 @@ public class NumbersArray {
             ErrorsHandling.errorsHandling(error);
             return null;
         }
+    }
+
+    public void printArray(){
+        Iterator<Integer> iteratorNumbers = numbersList.iterator();
+        int newLineMarker = 30;
+
+        while (iteratorNumbers.hasNext()){
+            System.out.print(iteratorNumbers.next());
+            if(newLineMarker == 0){
+                System.out.println();
+                newLineMarker = 30;
+            }
+        }
+
     }
 }
