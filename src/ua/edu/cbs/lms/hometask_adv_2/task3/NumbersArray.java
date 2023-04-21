@@ -43,6 +43,7 @@ public class NumbersArray {
 
         while (iteratorNumbers.hasNext()){
             System.out.print("[" + iteratorNumbers.next() + "] ");
+            newLineMarker--;
             if(newLineMarker <= 0){
                 System.out.println();
                 newLineMarker = 30;
