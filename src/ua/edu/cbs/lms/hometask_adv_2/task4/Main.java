@@ -10,7 +10,7 @@ public class Main {
 
         CitiesAssociation citiesAssociation = new CitiesAssociation();
 
-        citiesAssociation.addAssociation("moskov", "Huilo");
+        citiesAssociation.addAssociation("moskov", "huilo");
         citiesAssociation.addAssociation("Kyiv", "Heroes");
         citiesAssociation.addAssociation("London", "Johnson");
         citiesAssociation.addAssociation("Paris", "Macron");
