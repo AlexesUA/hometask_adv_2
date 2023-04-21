@@ -14,8 +14,9 @@ public class Main {
         try{
             String tempLine = "end";
             do{
+                System.out.print("Enter the string: ");
                 tempLine = scInput.nextLine();
-                if(!tempLine.toLowerCase().equals("end")) break;
+                if(tempLine.toLowerCase().equals("end")) break;
                 lines.add(tempLine);
             }while(true);
 
@@ -24,7 +25,7 @@ public class Main {
         }
 
         try{
-            if(lines.isEmpty()) throw new Exception("Lines array is empty.");
+            if(lines.isEmpty()) throw new Exception("Strings array is empty.");
             for(String line: lines){
                 System.out.println(line);
             }
