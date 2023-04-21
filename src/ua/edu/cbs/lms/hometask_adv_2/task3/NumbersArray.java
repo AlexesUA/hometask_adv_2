@@ -13,6 +13,8 @@ public class NumbersArray {
 
     public boolean getIntegerList(int count){
         try{
+            if(count<=0) throw new Exception("Cont can't be equals to or less than 0.");
+
             Random rndNumber = new Random();
 
             for(int i=0; i<count; i++){
@@ -27,6 +29,7 @@ public class NumbersArray {
 
     public Integer getMinimalNumber(){
         try {
+            if(!numbersList.iterator().hasNext()) throw new Exception("Arrays is null.");
             return numbersList.iterator().next();
         }catch (Exception error){
             ErrorsHandling.errorsHandling(error);
