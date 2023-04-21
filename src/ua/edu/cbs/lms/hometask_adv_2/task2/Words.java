@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class Words {
-    List<String> words = new LinkedList<>();
+    private List<String> words = new LinkedList<>();
 
     public boolean addWord(String word){
         try{
