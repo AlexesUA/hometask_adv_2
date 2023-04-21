@@ -23,10 +23,14 @@ public class Words {
     public void print(){
 
         try {
-            ListIterator<String> iteratorWords = words.listIterator();
+//            ListIterator<String> iteratorWords = words.listIterator();
+//
+//            while (iteratorWords.hasNext()) {
+//                System.out.println(iteratorWords.next());
+//            }
 
-            while (iteratorWords.hasNext()) {
-                System.out.println(iteratorWords.next());
+            for (int i=0; i<words.size(); i++){
+                System.out.println(words.get(i));
             }
         }catch (Exception error){
             ErrorsHandling.errorsHandling(error);
