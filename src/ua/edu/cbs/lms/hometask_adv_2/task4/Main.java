@@ -45,7 +45,7 @@ public class Main {
         if(line.indexOf(" ")>=0){
             String[] subLine = line.split(" ");
             String resultLine = "";
-            for(int i=0; i<=subLine.length; i++){
+            for(int i=0; i<=subLine.length-1; i++){
                 if(!subLine[i].equals(" ")){
                     resultLine += toUpperLowerCaseWord(subLine[i]) + " ";
                 }
